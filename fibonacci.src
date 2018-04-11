@@ -1,0 +1,19 @@
+WRITE "Программа для вычисления числа Фибоначчи. Введите номер элемента числовой последовательности:"
+READ EAX
+CALL FIBONACCI
+WRITE "Результат:"
+WRITE EAX
+
+DEF FIBONACCI
+LE EAX,1
+GOTO EXIT
+RDC EAX
+PUSH EAX
+CALL FIBONACCI
+SWAP EAX,ESP
+RDC EAX
+CALL FIBONACCI
+POP ECX
+ADD EAX,ECX
+EXIT:
+RET
