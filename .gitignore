@@ -150,5 +150,5 @@ ENV/
 # mypy
 .mypy_cache/
 
-fibonacci.bin
+task1/fibonacci.bin
 
